@@ -18,6 +18,7 @@ var Botkit = {
     reconnect_count: 0,
     guid: null,
     current_user: null,
+
     on: function (event, handler) {
         this.message_window.addEventListener(event, function (evt) {
             handler(evt.detail);
@@ -429,12 +430,12 @@ var Botkit = {
                 that.replies.appendChild(list);
 
                 // uncomment this code if you want your quick replies to scroll horizontally instead of stacking
-                // var width = 0;
-                // // resize this element so it will scroll horizontally
-                // for (var e = 0; e < elements.length; e++) {
-                //     width = width + elements[e].offsetWidth + 18;
-                // }
-                // list.style.width = width + 'px';
+                var width = 0;
+                // resize this element so it will scroll horizontally
+                for (var e = 0; e < elements.length; e++) {
+                    width = width + elements[e].offsetWidth + 18;
+                }
+                list.style.width = width + 'px';
 
                 if (message.disable_input) {
                     that.input.disabled = true;

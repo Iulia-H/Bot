@@ -18,6 +18,6 @@ module.exports = function(controller) {
     });
 
     controller.on('channel_join', async (bot, message) => {
-        await bot.reply(message, 'Welcome to the channel!');
+        await bot.say('Welcome to the channel!');
     });
 }

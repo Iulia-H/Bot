@@ -5,8 +5,7 @@
 const { BotkitConversation } = require("botkit");
 const express = require('express');
 const path = require('path');
-const resume = require('./resume');
-console.log(resume.resume);
+
 
 module.exports = function(controller) {
 
@@ -51,4 +50,19 @@ module.exports = function(controller) {
             await bot.reply(message, 'Typed!');
         }, 1000);
     });
-}
+
+
+    // Create a very simple dialog with 2 messages.
+    let DIALOG_ID = 'my_dialog_1';
+    let myDialog = new BotkitConversation(DIALOG_ID, controller);
+    myDialog.say('Hello!');
+    myDialog.say('Welcome to the world of bots!');
+
+    // Add the dialog to the bot
+    controller.addDialog(myDialog);
+
+    // Later, trigger the dialog
+    controller.on('channel_join', async (bot, message) => {
+        await bot.beginDialog(DIALOG_ID);
+    });
+};
