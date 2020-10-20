@@ -342,7 +342,6 @@ var Botkit = {
 
         var that = this;
 
-
         that.message_window = document.getElementById("message_window");
 
         that.message_list = document.getElementById("message_list");
