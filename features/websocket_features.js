@@ -22,8 +22,8 @@ const quickLinks = [
         payload: 'education',
     },
     {
-        title: 'Skills',
-        payload: 'skills',
+        title: 'Projects',
+        payload: 'projects',
     },
     {
         title: 'Profiles',
@@ -94,16 +94,16 @@ module.exports = function(controller) {
             text: 'This is my work history, please select a company to find out more about my time there',
             quick_replies: [
                 {
-                    title: 'Company 1',
-                    payload: `Company 1`,
+                    title: 'Eagle Relocations',
+                    payload: `Eagle Relocations`,
                 },
                 {
-                    title: 'Company 2',
-                    payload: 'Company 2',
+                    title: 'Hilton Hotel',
+                    payload: 'Hilton Hotel',
                 },
                 {
-                    title: 'Company 3',
-                    payload: 'Company 3',
+                    title: 'Tim Hortons',
+                    payload: 'Tim Hortons',
                 },
                 {
                     title: 'Resume',
@@ -120,12 +120,12 @@ module.exports = function(controller) {
             text: "Here's my education history. Click on one to find more about it",
             quick_replies: [
                 {
-                    title: 'Education 1',
-                    payload: `Education 1`,
+                    title: 'University of Manchester',
+                    payload: `University of Manchester`,
                 },
                 {
-                    title: 'Education 2',
-                    payload: 'Education 2',
+                    title: 'App Academy',
+                    payload: 'academy',
                 },
                 {
                     title: 'Resume',
@@ -136,18 +136,22 @@ module.exports = function(controller) {
         });
     });
 
-    controller.hears('skills','message,direct_message', async (bot, message) => {
+    controller.hears('projects','message,direct_message', async (bot, message) => {
         await bot.beginDialog('typing');
         await bot.reply(message, {
             text: "Please choose what kind of skills you'd like to explore",
             quick_replies: [
                 {
-                    title: 'Skills 1',
-                    payload: `Skills 1`,
+                    title: 'Twinkle',
+                    payload: `Twinkle`,
                 },
                 {
-                    title: 'Skills 2',
-                    payload: 'Skills 2',
+                    title: 'Loot',
+                    payload: 'Loot',
+                },
+                {
+                    title: 'Potion-Catcher',
+                    payload: 'Potion-Catcher',
                 },
                 {
                     title: 'Resume',
@@ -165,12 +169,20 @@ module.exports = function(controller) {
             text: "Here's some stuff I'm interested in",
             quick_replies:  [
                 {
-                    title: 'Interest 1',
-                    payload: `Interest 1`,
+                    title: 'Boadgames',
+                    payload: `boardgames`,
                 },
                 {
-                    title: 'Interest 2',
-                    payload: 'Interest 2',
+                    title: 'Soap making',
+                    payload: 'soapmaking',
+                },
+                {
+                    title: 'Gaming',
+                    payload: "gaming"
+                },
+                {
+                    title: '3D Design',
+                    payload: '3D design',
                 },
                 {
                     title: 'Resume',
@@ -250,25 +262,8 @@ module.exports = function(controller) {
         });
     });
 
-    controller.hears('company 2', 'message,direct_message', async (bot, message) => {
-        await bot.beginDialog('typing');
-        await bot.reply(message, `${resume.work.company2}`);
-        await bot.reply(message, {
-            text: "Otherwise please check some other links",
-            quick_replies: quickLinks
-        });
-    });
 
-    controller.hears('company 3', 'message,direct_message', async (bot, message) => {
-        await bot.beginDialog('typing');
-        await bot.reply(message, `${resume.work.company3}`);
-        await bot.reply(message, {
-            text: "Otherwise please check some other links",
-            quick_replies: quickLinks
-        });
-    });
-
-    controller.hears('institution1', 'message,direct_message', async (bot, message) => {
+    controller.hears('university', 'message,direct_message', async (bot, message) => {
         await bot.beginDialog('typing');
         await bot.reply(message, `${resume.education.institution1}`);
         await bot.reply(message, {
@@ -277,7 +272,7 @@ module.exports = function(controller) {
         });
     });
 
-    controller.hears('institution 2', 'message,direct_message', async (bot, message) => {
+    controller.hears('academy', 'message,direct_message', async (bot, message) => {
         await bot.beginDialog('typing');
         await bot.reply(message, `${resume.education.institution2}`);
         await bot.reply(message, {
@@ -286,36 +281,54 @@ module.exports = function(controller) {
         });
     });
 
-    controller.hears('skill 1', 'message,direct_message', async (bot, message) => {
+    controller.hears('Twinkle', 'message,direct_message', async (bot, message) => {
         await bot.beginDialog('typing');
-        await bot.reply(message, `${resume.skills.skill1}`);
+        await bot.reply(message, `${resume.projects.project1}`);
         await bot.reply(message, {
             text: "Otherwise please check some other links",
             quick_replies: quickLinks
         });
     });
 
-    controller.hears('skill 2', 'message,direct_message', async (bot, message) => {
+    controller.hears('Loot', 'message,direct_message', async (bot, message) => {
         await bot.beginDialog('typing');
-        await bot.reply(message, `${resume.skills.skill2}`);
+        await bot.reply(message, `${resume.projects.project2}`);
         await bot.reply(message, {
             text: "Otherwise please check some other links",
             quick_replies: quickLinks
         });
     });
 
-    controller.hears('interest1', 'message,direct_message', async (bot, message) => {
+    controller.hears('Potion-Catcher', 'message,direct_message', async (bot, message) => {
         await bot.beginDialog('typing');
-        await bot.reply(message, `${resume.interests.interest1}`);
+        await bot.reply(message, `${resume.projects.project3}`);
         await bot.reply(message, {
             text: "Otherwise please check some other links",
             quick_replies: quickLinks
         });
     });
 
-    controller.hears('interest2', 'message,direct_message', async (bot, message) => {
+    controller.hears('boardgames', 'message,direct_message', async (bot, message) => {
         await bot.beginDialog('typing');
-        await bot.reply(message, `${resume.interests.interest2}`);
+        await bot.reply(message, `${resume.interests.boardgames}`);
+        await bot.reply(message, {
+            text: "Otherwise please check some other links",
+            quick_replies: quickLinks
+        });
+    });
+
+    controller.hears('soapmaking', 'message,direct_message', async (bot, message) => {
+        await bot.beginDialog('typing');
+        await bot.reply(message, `${resume.interests.soapmaking}`);
+        await bot.reply(message, {
+            text: "Otherwise please check some other links",
+            quick_replies: quickLinks
+        });
+    });
+
+    controller.hears('design', 'message,direct_message', async (bot, message) => {
+        await bot.beginDialog('typing');
+        await bot.reply(message, `${resume.interests.design}`);
         await bot.reply(message, {
             text: "Otherwise please check some other links",
             quick_replies: quickLinks
