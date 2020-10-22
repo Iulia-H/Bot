@@ -95,15 +95,7 @@ module.exports = function(controller) {
             quick_replies: [
                 {
                     title: 'Eagle Relocations',
-                    payload: `Eagle Relocations`,
-                },
-                {
-                    title: 'Hilton Hotel',
-                    payload: 'Hilton Hotel',
-                },
-                {
-                    title: 'Tim Hortons',
-                    payload: 'Tim Hortons',
+                    payload: `relocations`,
                 },
                 {
                     title: 'Resume',
@@ -206,7 +198,7 @@ module.exports = function(controller) {
         await bot.beginDialog('typing');
         await bot.reply(message, `My name is ${resume.basics.name}`);
         await bot.reply(message, {
-            text: "Otherwise please check some other links",
+            text: "Please check some other links",
             quick_replies: quickLinks
         });
     });
@@ -216,7 +208,7 @@ module.exports = function(controller) {
         await bot.beginDialog('typing');
         await bot.reply(message, `My email is ${resume.basics.email}`);
         await bot.reply(message, {
-            text: "Otherwise please check some other links",
+            text: "Please check some other links",
             quick_replies: quickLinks
         });
     });
@@ -226,7 +218,7 @@ module.exports = function(controller) {
         await bot.beginDialog('typing');
         await bot.reply(message, `My phone number is ${resume.basics.phone}`);
         await bot.reply(message, {
-            text: "Otherwise please check some other links",
+            text: "Please check some other links",
             quick_replies: quickLinks
         });
     });
@@ -237,7 +229,7 @@ module.exports = function(controller) {
         await bot.beginDialog('typing');
         await bot.reply(message, `The link to my profile is ${resume.basics.profile}`);
         await bot.reply(message, {
-            text: "Otherwise please check some other links",
+            text: "Please check some other links",
             quick_replies: quickLinks
         });
     });
@@ -248,16 +240,16 @@ module.exports = function(controller) {
         await bot.beginDialog('typing');
         await bot.reply(message, `${resume.basics.summary}`);
         await bot.reply(message, {
-            text: "Otherwise please check some other links",
+            text: "Please check some other links",
             quick_replies: quickLinks
         });
     });
 
-    controller.hears('company 1', 'message,direct_message', async (bot, message) => {
+    controller.hears('relocations', 'message,direct_message', async (bot, message) => {
         await bot.beginDialog('typing');
         await bot.reply(message, `${resume.work.company1}`);
         await bot.reply(message, {
-            text: "Otherwise please check some other links",
+            text: "Please check some other links",
             quick_replies: quickLinks
         });
     });
@@ -267,7 +259,7 @@ module.exports = function(controller) {
         await bot.beginDialog('typing');
         await bot.reply(message, `${resume.education.institution1}`);
         await bot.reply(message, {
-            text: "Otherwise please check some other links",
+            text: "Please check some other links",
             quick_replies: quickLinks
         });
     });
@@ -276,7 +268,7 @@ module.exports = function(controller) {
         await bot.beginDialog('typing');
         await bot.reply(message, `${resume.education.institution2}`);
         await bot.reply(message, {
-            text: "Otherwise please check some other links",
+            text: "Please check some other links",
             quick_replies: quickLinks
         });
     });
@@ -285,7 +277,7 @@ module.exports = function(controller) {
         await bot.beginDialog('typing');
         await bot.reply(message, `${resume.projects.project1}`);
         await bot.reply(message, {
-            text: "Otherwise please check some other links",
+            text: "Please check some other links",
             quick_replies: quickLinks
         });
     });
@@ -294,7 +286,7 @@ module.exports = function(controller) {
         await bot.beginDialog('typing');
         await bot.reply(message, `${resume.projects.project2}`);
         await bot.reply(message, {
-            text: "Otherwise please check some other links",
+            text: "Please check some other links",
             quick_replies: quickLinks
         });
     });
@@ -303,7 +295,7 @@ module.exports = function(controller) {
         await bot.beginDialog('typing');
         await bot.reply(message, `${resume.projects.project3}`);
         await bot.reply(message, {
-            text: "Otherwise please check some other links",
+            text: "Please check some other links",
             quick_replies: quickLinks
         });
     });
@@ -312,7 +304,7 @@ module.exports = function(controller) {
         await bot.beginDialog('typing');
         await bot.reply(message, `${resume.interests.boardgames}`);
         await bot.reply(message, {
-            text: "Otherwise please check some other links",
+            text: "Please check some other links",
             quick_replies: quickLinks
         });
     });
@@ -321,7 +313,7 @@ module.exports = function(controller) {
         await bot.beginDialog('typing');
         await bot.reply(message, `${resume.interests.soapmaking}`);
         await bot.reply(message, {
-            text: "Otherwise please check some other links",
+            text: "Please check some other links",
             quick_replies: quickLinks
         });
     });
@@ -330,7 +322,7 @@ module.exports = function(controller) {
         await bot.beginDialog('typing');
         await bot.reply(message, `${resume.interests.design}`);
         await bot.reply(message, {
-            text: "Otherwise please check some other links",
+            text: "Please check some other links",
             quick_replies: quickLinks
         });
     });

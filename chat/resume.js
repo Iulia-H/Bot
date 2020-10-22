@@ -12,7 +12,7 @@ const resume = {
     },
     "education": {
         "institution1": "I attended Manchester Univesity where I studied Politics and International Relations ",
-        "institution2": ""
+        "institution2": "Graduated App Academy in May 2020."
     },
     "projects": {
         "project1": "Twinkle (https://tw1nkle.herokuapp.com) is a full stack clone of Flickr created by using Ruby on Rails and PostgreSQL on backend and React/ Redux for the frontend. It utilizes AWS for file storage to decrease the load on the Heroku server on which it is hosted.",
@@ -20,9 +20,9 @@ const resume = {
         "project3": "Potion Catcher (https://iulia-h.github.io/Potion-catcher/)  is a browser game hosted on Github which utilizes Javascript for logic implementation and HTML Canvas animation to create smooth frame transitions."
     },
     "interests": {
-        "boardgames": "",
-        "soapmaking": "" ,
-        "design": ""
+        "boardgames": "I enjoy playing cooperative boardgames.",
+        "soapmaking": "I have a passion for making cold processed soaps with different fragrances and designs" ,
+        "design": "I taught myself Blender and 3D modelling which I use to design custom tiles for different boardgames."
     }
 };
 

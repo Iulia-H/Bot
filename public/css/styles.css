@@ -8,7 +8,7 @@ html {
   margin: 0;
   padding: 0;
   font-size: 18px;
-  background-color:rgb(43, 37, 37);
+  background-color:rgb(41, 31, 31);
   font-family: "helvetica", sans-serif;
 }
 
@@ -71,7 +71,7 @@ div.input label {
   border: 1px solid #999;
   border-radius: 6px;
   padding: 5px;
-  background: #835353;
+  background: #F0F0F0;
 }
 .addon input,
 .addon textarea {
@@ -121,7 +121,7 @@ a.button:hover {
 
 /* chat client */
 #message_window {
-  background: #cc1111;
+  background: #FFFFFF;
   border-left: 1px solid #CCC;
   border-right: 1px solid #CCC;
   /*height: 500px;
